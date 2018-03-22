@@ -11,12 +11,15 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Image
 } from "spectacle";
-
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import "react-simple-flex-grid/lib/main.css";
+import { Row, Col } from "react-simple-flex-grid";
 
+const gaboThug = require("./../assets/gabo-thug.png");
 // Require CSS
 require("normalize.css");
 
@@ -39,27 +42,33 @@ export default class Presentation extends React.Component {
             Gabo a .NET
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            Nakúkanie do kultúry .NETu na objednávku slavnoj FAI
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+          <Row>
+            <Col span={5}>
+              <Image src={gaboThug} height={600}/>
+            </Col>
+            <Col offset={1} span={6}>
+              <List>
+                <ListItem>~2 roky vývoja v .NET</ListItem>
+                <ListItem>BLogic</ListItem>
+                <ListItem>BSP</ListItem>
+                <ListItem>ALO, Colorlak, SummitTrade, Continental, Gumex</ListItem>
+              </List>
+            </Col>
+          </Row>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+          <Heading size={6} textColor="secondary" caps>Stack</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>MSSQL</ListItem>
+            <ListItem>ASP MVC</ListItem>
+            <ListItem>Typescript</ListItem>
           </List>
         </Slide>
+
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>

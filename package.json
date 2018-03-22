@@ -1,16 +1,18 @@
 {
-  "name": "spectacle-boilerplate",
-  "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "name": "gabo-and-dot-net",
+  "version": "1.0.2",
+  "description": "ReactJS Powered Presentation",
   "main": "lib/index.js",
+  "homepage": "https://gaboe.github.io/gabo-and-dot-net/",
   "scripts": {
     "dev": "yarn start",
-    "clean": "rimraf dist",
+    "clean": "rimraf build",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
     "export": "spectacle-renderer --delay 3000",
-    "start": "cross-env NODE_ENV=development node server.js"
+    "start": "cross-env NODE_ENV=development node server.js",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "MIT",
@@ -47,6 +49,7 @@
     "eslint-plugin-react": "^7.4.0",
     "express": "^4.16.2",
     "file-loader": "^1.1.5",
+    "gh-pages": "^1.1.0",
     "html-loader": "^0.5.1",
     "is-buffer": "^1.1.5",
     "markdown-loader": "^2.0.1",

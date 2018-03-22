@@ -2,6 +2,7 @@
 
 var path = require("path");
 var webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -11,7 +12,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: "/build/"
+    publicPath: ""
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -23,6 +24,9 @@ module.exports = {
       compressor: {
         warnings: false
       }
+    }),
+    new HtmlWebpackPlugin({
+      template: 'index.html'
     })
   ],
   module: {

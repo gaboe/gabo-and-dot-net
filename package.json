@@ -4,6 +4,7 @@
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
   "scripts": {
+    "dev": "yarn start",
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",

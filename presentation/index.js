@@ -3,15 +3,11 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
-  Text,
   Image
 } from "spectacle";
 // Import theme
@@ -31,10 +27,7 @@ const theme = createTheme({
   secondary: "#1F2022",
   tertiary: "#03A9FC",
   quarternary: "#CECECE"
-}, {
-    primary: "Montserrat",
-    secondary: "Helvetica"
-  });
+}, { primary: "Montserrat", secondary: "Helvetica" });
 
 export default class Presentation extends React.Component {
   render() {
@@ -44,9 +37,6 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Gabo &amp; .NET
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            Nakúkanie do kultúry .NETu na objednávku slavnoj FAI
-          </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
           <Row>
@@ -58,7 +48,9 @@ export default class Presentation extends React.Component {
                 <ListItem>~2 roky vývoja v .NET</ListItem>
                 <ListItem>BLogic</ListItem>
                 <ListItem>BSP</ListItem>
-                <ListItem>ALOve, Colorlak, SummitTrade, Continental, Gumex</ListItem>
+                <ListItem>ALOve</ListItem>
+                <ListItem>Colorlak</ListItem>
+                <ListItem>SummitTrade</ListItem>
               </List>
             </Col>
           </Row>
@@ -92,8 +84,8 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading size={6} textColor="tertiary" caps>App+DB</Heading>
           <List>
-            <ListItem>95% EF</ListItem>
-            <ListItem>5% C# Dynamic SQL Queries</ListItem>
+            <ListItem>92% EF</ListItem>
+            <ListItem>8% C# Dynamic SQL Queries</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
